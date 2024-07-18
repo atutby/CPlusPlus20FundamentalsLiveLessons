@@ -60,6 +60,10 @@ Ctrl + D (exit)
 docker start cpp20fnd-container
 docker exec -it cpp20fnd-container bash
 
+docker save -o atut/c-graduate28 c-graduate-image
+docker tag c-graduate-image atutsashadock/c-graduate28
+
+
 
 
 
