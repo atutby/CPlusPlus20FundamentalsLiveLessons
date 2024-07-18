@@ -1,0 +1,75 @@
+
+docs.docker.com/engine/install
+
+Docker
+Start(button) cmd administrator
+>docker version
+Start Службы > Docker
+>docker run -d -p 80:80 docker/getting-started
+>docker ps
+>docker images
+>docker container ls -a
+>docker container start <IMAGE_ID>
+>docker container stop <IMAGE_ID>
+
+
+
+Основы Docker. Большой практический выпуск
+https://www.youtube.com/watch?v=QF4ZF857m44
+
+>посмотреть образы
+>docker images
+// посмотреть запущенные контейнеры
+>docker ps
+// посмотреть все контейнеры
+>docker container ls -a
+
+
+>docker build -t hello-world .
+dockerfile
+
+
+>docker ps -a
+>docker run --name hello hello-world
+>docker ps -a
+>docker rm <CONTAINER_ID>
+>docker ps -a -q
+// удалить все контейнеры
+>docker rm $(docker ps -qa)
+// создать новый образ из dockerfile
+>docker build -t hello-world .
+// запускаем
+> docker run --name hello -d hello-world
+> docker stop hello
+// команда --rm удаляем контейнер после его остановки
+// комнада --name hello запускает контейнер под именем hello
+// команда -d освобождает терминал
+>docker run --name hello -d --rm hello-world
+>docker stop hello
+>docker ps -a // Ничего
+
+// установить flask в python
+>pip install flask
+// или установить из подготовленного файла requirements.txt
+>pip install --no-cache-dir -r requirements.txt
+
+// пробрасываем порты наверх
+// в dockerfile пишем EXPOSE 8080
+// -p 8080:8080 добавляем команду
+> docker run --rm --name web -p 8080:8080 web-hello
+
+// добавим переменную окружения 
+// ENV TZ Europe/Moscow
+
+>docker volume ls
+>docker volume create web
+>docker volume ls
+>docker run --rm --name web -v web:/usr/src/app/resources
+
+
+Kubernetes 101: Pods, Nodes, Containers, and Clusters
+
+
+docker run --name c-graduate-container -it -v "%CD%":/usr/src -w /usr/src ubuntu
+docker start c-graduate-container
+docker exec -it c-graduate-container bash

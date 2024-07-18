@@ -22,16 +22,10 @@ https://cpplang-inviter.cppalliance.org
 https://www.includecpp.org/discord/
 
 README.md
-cd C:\Users\jonhp28\Documents\examples\
-cd C:/Users/jonhp28/Documents/examples/
+cd C:/Users/jonhp28/Documents/examples/examples/
 docker run --rm -it -v "%CD%":/usr/src teeks99/clang-ubuntu:16
 
 
-Docker
-Start(button) cmd administrator
->docker version
-Start Службы > Docker
->docker run -d -p 80:80 docker/getting-started
 
 
 
