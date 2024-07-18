@@ -55,15 +55,15 @@ g++ -std=c++20 GuessNumber.cpp -o GuessNumber
 
 
 ==== Additional ( cpp20fnd-container ) ===
-docker run --name cpp20fnd-container -it -v "%CD%":/usr/src -w /usr/src c-graduate-image
+docker run --name cpp20fnd-container -it -v "%CD%":/usr/src -w /usr/src atutsashadock/c-graduate28
 Ctrl + D (exit)
 docker start cpp20fnd-container
 docker exec -it cpp20fnd-container bash
 
-docker save -o atut/c-graduate28 c-graduate-image
+docker save -o atutsashadock/c-graduate28 c-graduate-image
 docker tag c-graduate-image atutsashadock/c-graduate28
 
-
+docker run --name c-graduate-container -it -v "%CD%":/usr/src -w /usr/src atutsashadock/c-graduate28
 
 
 
