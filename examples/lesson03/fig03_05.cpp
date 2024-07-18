@@ -27,6 +27,8 @@ int main() {
    cout << "\n\nMULTIPLY A CPP_INT OBJECT BY INT VALUES"
       << "\nvalue1 * value3: " << value1 * value3
       << "\n    value1 * 17: " << value1 * 17 << "\n";
+
+   std::cin.get();
 }
 
 
